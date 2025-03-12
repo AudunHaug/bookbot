@@ -12,3 +12,12 @@ def count_characters(file_contents):
         else:
             data[char] += 1
     return data
+
+def dict_to_list(dict):
+    list = []
+    for item in dict:
+        tmp = {"char": item, "count": dict[item]}
+        list.append(tmp)
+    list.sort(reverse=True,key=lambda x: x["count"])
+    return list
+
